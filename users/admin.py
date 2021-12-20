@@ -6,4 +6,4 @@ from . import models
 @admin.register(models.User)
 class CustomUserAdmin(admin.ModelAdmin):
     """ Custom User Admin """
-    list_diaplay = ('username', 'gender', 'language', 'currency', 'superhost')
+    list_display = ('username', 'gender', 'language', 'currency', 'superhost')
