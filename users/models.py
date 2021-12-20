@@ -31,13 +31,13 @@ class User(AbstractUser):
         (CURRENCY_KRW, "KRW"),
     )
     # null is for db, blank is for admin field
-    avatar = models.ImageField(null=True, blank=True)
+    avatar = models.ImageField(blank=True)
     gender = models.CharField(
-        max_length=10, choices=GENDER_CHOICES, null=True, blank=True)
+        max_length=10, choices=GENDER_CHOICES, blank=True)
     bio = models.TextField(default="")
-    birthdate = models.DateField(null=True)
+    birthdate = models.DateField(blank=True, null=True)
     language = models.CharField(
-        choices=LANGUAGE_CHOICES, max_length=2, null=True, blank=True)
+        choices=LANGUAGE_CHOICES, max_length=2, blank=True)
     currency = models.CharField(
-        choices=CURRENCY_CHOICES, max_length=3, null=True, blank=True)
+        choices=CURRENCY_CHOICES, max_length=3, blank=True)
     superhost = models.BooleanField(default=False)
