@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.path.join(BASE_DIR, 'secret.json')
+SECRET_KEY = os.path.join(BASE_DIR, "secret.json")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,8 +39,12 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
+THIRD_PARTY_APPS = ["django_countries"]
+
 PROJECT_APPS = [
-    "users.apps.UsersConfig", "rooms.apps.RoomsConfig", "core.apps.CoreConfig",
+    "users.apps.UsersConfig",
+    "rooms.apps.RoomsConfig",
+    "core.apps.CoreConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
