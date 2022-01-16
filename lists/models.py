@@ -7,7 +7,7 @@ class List(core_models.TimeStampModel):
     """List Model Definition"""
 
     name = models.CharField(max_length=80)
-    user = models.ForeignKey("users.User", on_delete=CASCADE)
+    user = models.ForeignKey("users.User", on_delete=models.CASCADE)
     rooms = models.ManyToManyField("rooms.Room", blank=True)
 
     def __str__(self):
